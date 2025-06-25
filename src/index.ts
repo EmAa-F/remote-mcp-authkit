@@ -12,15 +12,6 @@ export class MyMCP extends McpAgent<Env, unknown, Props> {
 	});
 
 	async init() {
-		// Hello, world!
-		this.server.tool(
-			"add",
-			"Add two numbers the way only MCP can",
-			{ a: z.number(), b: z.number() },
-			async ({ a, b }) => ({
-				content: [{ type: "text", text: String(a + b) }],
-			})
-		);
 
 		// Dynamically add tools based on the user's permissions. They must have the
 		// `image_generation` permission to use this tool.
